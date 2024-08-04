@@ -42,20 +42,21 @@ tbl_regression(fit_my_data, intercept = TRUE)
 ```
 
 ```{r}
-# new_data <- tibble(EPDS = seq(min(my_table$EPDS), max(my_table$EPDS), length.out = 100),
-#                    PROMIS_Anxiety = mean(my_table$PROMIS_Anxiety),
-#                    Threaten_Baby_Danger = mean(my_table$Threaten_Baby_Danger))
-# # Add predicted draws
-# predicted_draws <- fit_my_data %>%
-#   add_epred_draws(newdata = new_data)
-# 
-# # Plot the effect of EPDS on Birth Weight
-# predicted_draws %>%
-#   ggplot(aes(x = EPDS, y = .epred)) +
-#   stat_lineribbon() +
-#   labs(title = "Effect of EPDS on Baby Weight",
-#        x = "EPDS Score",
-#        y = "Predicted Baby Weight") +
-#   theme_minimal()
+new_data <- tibble(EPDS = seq(min(my_table$EPDS), max(my_table$EPDS), length.out = 100),
+                   PROMIS_Anxiety = mean(my_table$PROMIS_Anxiety),
+                   Threaten_Baby_Danger = mean(my_table$Threaten_Baby_Danger))
+# Add predicted draws
+predicted_draws <- fit_my_data %>%
+  add_epred_draws(newdata = new_data)
+
+# Plot the effect of EPDS on Birth Weight
+predicted_draws %>%
+  ggplot(aes(x = EPDS, y = .epred)) +
+  geom_smooth() +
+  labs(title = "Effect of EPDS on Baby Weight",
+       x = "EPDS Score",
+       y = "Predicted Baby Weight") +
+  theme_minimal()
 ```
+
 
