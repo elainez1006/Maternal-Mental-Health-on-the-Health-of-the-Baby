@@ -94,9 +94,8 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <span class="nav-link">
-<span class="menu-text">Sources</span>
-    </span>
+    <a class="nav-link" href="./sources.qumd"> 
+<span class="menu-text">Sources</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./about.html"> 
@@ -144,57 +143,39 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>Mental well-being has changed drastically during COVID-19, which may have effects on children born during this period due to the epigenetic alterations. It is shown that mothers with a high Edinburgh Postnatal Depression Scale (EPDS) results have children weighing 0-8% less compared to the average weight of 3,463 grams. Using data from a 2024 study, I seek to find a correlation between maternal mental health and health of the baby during COVID-19. I modeled a linear relationship of the EPDS results, ranging from integers 0-30, and baby mass in grams.</p>
 <div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code> Family: gaussian 
-  Links: mu = identity; sigma = identity 
-Formula: Birth_Weight ~ PROMIS_Anxiety + EPDS + Threaten_Baby_Danger 
-   Data: my_table (Number of observations: 5694) 
-  Draws: 4 chains, each with iter = 2000; warmup = 1000; thin = 1;
-         total post-warmup draws = 4000
-
-Regression Coefficients:
-                     Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS
-Intercept             3463.07     24.69  3413.56  3510.99 1.00     3810
-PROMIS_Anxiety           1.74      2.05    -2.29     5.77 1.00     2471
-EPDS                    -3.62      2.23    -7.97     0.69 1.00     2370
-Threaten_Baby_Danger    -0.99      0.29    -1.54    -0.44 1.00     3630
-                     Tail_ESS
-Intercept                3483
-PROMIS_Anxiety           2835
-EPDS                     2694
-Threaten_Baby_Danger     2722
-
-Further Distributional Parameters:
-      Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
-sigma   537.22      5.07   527.37   547.17 1.00     4594     2962
-
-Draws were sampled using sampling(NUTS). For each parameter, Bulk_ESS
-and Tail_ESS are effective sample size measures, and Rhat is the potential
-scale reduction factor on split chains (at convergence, Rhat = 1).</code></pre>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
 </div>
+</div>
+</div>
+<div class="cell">
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning in tidy.brmsfit(x, ..., effects = "fixed"): some parameter names
 contain underscores: term naming may be unreliable!</code></pre>
 </div>
 <div class="cell-output-display">
-<div id="mhgiwnbghk" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#mhgiwnbghk table {
+<div id="znpkhezyjq" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#znpkhezyjq table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#mhgiwnbghk thead, #mhgiwnbghk tbody, #mhgiwnbghk tfoot, #mhgiwnbghk tr, #mhgiwnbghk td, #mhgiwnbghk th {
+#znpkhezyjq thead, #znpkhezyjq tbody, #znpkhezyjq tfoot, #znpkhezyjq tr, #znpkhezyjq td, #znpkhezyjq th {
   border-style: none;
 }
 
-#mhgiwnbghk p {
+#znpkhezyjq p {
   margin: 0;
   padding: 0;
 }
 
-#mhgiwnbghk .gt_table {
+#znpkhezyjq .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -220,12 +201,12 @@ contain underscores: term naming may be unreliable!</code></pre>
   border-left-color: #D3D3D3;
 }
 
-#mhgiwnbghk .gt_caption {
+#znpkhezyjq .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#mhgiwnbghk .gt_title {
+#znpkhezyjq .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -237,7 +218,7 @@ contain underscores: term naming may be unreliable!</code></pre>
   border-bottom-width: 0;
 }
 
-#mhgiwnbghk .gt_subtitle {
+#znpkhezyjq .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -249,7 +230,7 @@ contain underscores: term naming may be unreliable!</code></pre>
   border-top-width: 0;
 }
 
-#mhgiwnbghk .gt_heading {
+#znpkhezyjq .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -261,13 +242,13 @@ contain underscores: term naming may be unreliable!</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#mhgiwnbghk .gt_bottom_border {
+#znpkhezyjq .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#mhgiwnbghk .gt_col_headings {
+#znpkhezyjq .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -282,7 +263,7 @@ contain underscores: term naming may be unreliable!</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#mhgiwnbghk .gt_col_heading {
+#znpkhezyjq .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -302,7 +283,7 @@ contain underscores: term naming may be unreliable!</code></pre>
   overflow-x: hidden;
 }
 
-#mhgiwnbghk .gt_column_spanner_outer {
+#znpkhezyjq .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -314,15 +295,15 @@ contain underscores: term naming may be unreliable!</code></pre>
   padding-right: 4px;
 }
 
-#mhgiwnbghk .gt_column_spanner_outer:first-child {
+#znpkhezyjq .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#mhgiwnbghk .gt_column_spanner_outer:last-child {
+#znpkhezyjq .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#mhgiwnbghk .gt_column_spanner {
+#znpkhezyjq .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -334,11 +315,11 @@ contain underscores: term naming may be unreliable!</code></pre>
   width: 100%;
 }
 
-#mhgiwnbghk .gt_spanner_row {
+#znpkhezyjq .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#mhgiwnbghk .gt_group_heading {
+#znpkhezyjq .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -364,7 +345,7 @@ contain underscores: term naming may be unreliable!</code></pre>
   text-align: left;
 }
 
-#mhgiwnbghk .gt_empty_group_heading {
+#znpkhezyjq .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -379,15 +360,15 @@ contain underscores: term naming may be unreliable!</code></pre>
   vertical-align: middle;
 }
 
-#mhgiwnbghk .gt_from_md > :first-child {
+#znpkhezyjq .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#mhgiwnbghk .gt_from_md > :last-child {
+#znpkhezyjq .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#mhgiwnbghk .gt_row {
+#znpkhezyjq .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -406,7 +387,7 @@ contain underscores: term naming may be unreliable!</code></pre>
   overflow-x: hidden;
 }
 
-#mhgiwnbghk .gt_stub {
+#znpkhezyjq .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -419,7 +400,7 @@ contain underscores: term naming may be unreliable!</code></pre>
   padding-right: 5px;
 }
 
-#mhgiwnbghk .gt_stub_row_group {
+#znpkhezyjq .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -433,15 +414,15 @@ contain underscores: term naming may be unreliable!</code></pre>
   vertical-align: top;
 }
 
-#mhgiwnbghk .gt_row_group_first td {
+#znpkhezyjq .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#mhgiwnbghk .gt_row_group_first th {
+#znpkhezyjq .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#mhgiwnbghk .gt_summary_row {
+#znpkhezyjq .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -451,16 +432,16 @@ contain underscores: term naming may be unreliable!</code></pre>
   padding-right: 5px;
 }
 
-#mhgiwnbghk .gt_first_summary_row {
+#znpkhezyjq .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#mhgiwnbghk .gt_first_summary_row.thick {
+#znpkhezyjq .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#mhgiwnbghk .gt_last_summary_row {
+#znpkhezyjq .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -470,7 +451,7 @@ contain underscores: term naming may be unreliable!</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#mhgiwnbghk .gt_grand_summary_row {
+#znpkhezyjq .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -480,7 +461,7 @@ contain underscores: term naming may be unreliable!</code></pre>
   padding-right: 5px;
 }
 
-#mhgiwnbghk .gt_first_grand_summary_row {
+#znpkhezyjq .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -490,7 +471,7 @@ contain underscores: term naming may be unreliable!</code></pre>
   border-top-color: #D3D3D3;
 }
 
-#mhgiwnbghk .gt_last_grand_summary_row_top {
+#znpkhezyjq .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -500,11 +481,11 @@ contain underscores: term naming may be unreliable!</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#mhgiwnbghk .gt_striped {
+#znpkhezyjq .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#mhgiwnbghk .gt_table_body {
+#znpkhezyjq .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -513,7 +494,7 @@ contain underscores: term naming may be unreliable!</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#mhgiwnbghk .gt_footnotes {
+#znpkhezyjq .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -527,7 +508,7 @@ contain underscores: term naming may be unreliable!</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#mhgiwnbghk .gt_footnote {
+#znpkhezyjq .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -536,7 +517,7 @@ contain underscores: term naming may be unreliable!</code></pre>
   padding-right: 5px;
 }
 
-#mhgiwnbghk .gt_sourcenotes {
+#znpkhezyjq .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -550,7 +531,7 @@ contain underscores: term naming may be unreliable!</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#mhgiwnbghk .gt_sourcenote {
+#znpkhezyjq .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -558,72 +539,72 @@ contain underscores: term naming may be unreliable!</code></pre>
   padding-right: 5px;
 }
 
-#mhgiwnbghk .gt_left {
+#znpkhezyjq .gt_left {
   text-align: left;
 }
 
-#mhgiwnbghk .gt_center {
+#znpkhezyjq .gt_center {
   text-align: center;
 }
 
-#mhgiwnbghk .gt_right {
+#znpkhezyjq .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#mhgiwnbghk .gt_font_normal {
+#znpkhezyjq .gt_font_normal {
   font-weight: normal;
 }
 
-#mhgiwnbghk .gt_font_bold {
+#znpkhezyjq .gt_font_bold {
   font-weight: bold;
 }
 
-#mhgiwnbghk .gt_font_italic {
+#znpkhezyjq .gt_font_italic {
   font-style: italic;
 }
 
-#mhgiwnbghk .gt_super {
+#znpkhezyjq .gt_super {
   font-size: 65%;
 }
 
-#mhgiwnbghk .gt_footnote_marks {
+#znpkhezyjq .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#mhgiwnbghk .gt_asterisk {
+#znpkhezyjq .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#mhgiwnbghk .gt_indent_1 {
+#znpkhezyjq .gt_indent_1 {
   text-indent: 5px;
 }
 
-#mhgiwnbghk .gt_indent_2 {
+#znpkhezyjq .gt_indent_2 {
   text-indent: 10px;
 }
 
-#mhgiwnbghk .gt_indent_3 {
+#znpkhezyjq .gt_indent_3 {
   text-indent: 15px;
 }
 
-#mhgiwnbghk .gt_indent_4 {
+#znpkhezyjq .gt_indent_4 {
   text-indent: 20px;
 }
 
-#mhgiwnbghk .gt_indent_5 {
+#znpkhezyjq .gt_indent_5 {
   text-indent: 25px;
 }
 
-#mhgiwnbghk .katex-display {
+#znpkhezyjq .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#mhgiwnbghk div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#znpkhezyjq div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -675,18 +656,6 @@ contain underscores: term naming may be unreliable!</code></pre>
 
 </table>
 
-</div>
-</div>
-</div>
-<div class="cell">
-<div class="cell-output cell-output-stderr">
-<pre><code>`geom_smooth()` using method = 'gam' and formula = 'y ~ s(x, bs = "cs")'</code></pre>
-</div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
 </div>
 </div>
 </div>
@@ -786,7 +755,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/4c276e78-f897-4018-bfba-8713c924d9bd\.netlify\.app\/");
+      var filterRegex = new RegExp('/' + window.location.host + '/');
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }

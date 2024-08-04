@@ -4,3 +4,10 @@ author: "Elaine Zhang"
 format: html
 ---
 
+My name is Elaine Zhang. I'm a student in Dover-Sherborn Regional High. I'm interested in statistics and discovering relationships in our daily life. 
+R | Python | Javascript
+
+~~~
+Elaine Zhang,
+@elainez1005@gmail.com
+~~~

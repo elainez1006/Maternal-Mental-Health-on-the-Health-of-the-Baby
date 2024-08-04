@@ -94,9 +94,8 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <span class="nav-link">
-<span class="menu-text">Sources</span>
-    </span>
+    <a class="nav-link" href="./sources.qumd"> 
+<span class="menu-text">Sources</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./about.html"> 
@@ -240,7 +239,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/4c276e78-f897-4018-bfba-8713c924d9bd\.netlify\.app\/");
+      var filterRegex = new RegExp("https:\/\/e0eb9d0b-42d4-4318-be55-d2461e9e48cb\.netlify\.app\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }

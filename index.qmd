@@ -19,6 +19,8 @@ library(broom.mixed)
 
 ```{r}
 my_data <- read.csv("pregnancy-data.csv", sep = ",")
+
+#turning the csv into a table and selecting for mental health variables. Got rid of data with missing values and renamed EPDS
 my_table <- tibble(my_data) |>
   select(PROMIS_Anxiety, Edinburgh_Postnatal_Depression_Scale, Threaten_Baby_Danger, Birth_Weight) |>
   drop_na() |>
@@ -36,12 +38,11 @@ fit_my_data <- brm(
   refresh = 0,
   seed = 12
 )
-
-fit_my_data
-tbl_regression(fit_my_data, intercept = TRUE)
 ```
-
+Mental well-being has changed drastically during COVID-19, which may have effects on children born during this period due to the epigenetic alterations. It is shown that mothers with a high Edinburgh Postnatal Depression Scale (EPDS) results have children weighing 0-8% less compared to the average weight of 3,463 grams. Using data from a 2024 study, I seek to find a correlation between maternal mental health and health of the baby during COVID-19. I modeled a linear relationship of the EPDS results, ranging from integers 0-30, and baby mass in grams.
 ```{r}
+#| warning: false
+
 new_data <- tibble(EPDS = seq(min(my_table$EPDS), max(my_table$EPDS), length.out = 100),
                    PROMIS_Anxiety = mean(my_table$PROMIS_Anxiety),
                    Threaten_Baby_Danger = mean(my_table$Threaten_Baby_Danger))
@@ -52,11 +53,16 @@ predicted_draws <- fit_my_data %>%
 # Plot the effect of EPDS on Birth Weight
 predicted_draws %>%
   ggplot(aes(x = EPDS, y = .epred)) +
-  geom_smooth() +
-  labs(title = "Effect of EPDS on Baby Weight",
-       x = "EPDS Score",
-       y = "Predicted Baby Weight") +
+  stat_lineribbon() +
+  labs(title = "Effect of Postnatal Depression on Baby Weight",
+       x = "Edinburgh Postnatal Depression Scale Score",
+       y = "Predicted Baby Weight",
+       caption = "Public Data by Yeganeh Bavafa under \n\"Mental health in the pregnancy during the COVID-19\"",
+       level = "Level") +
   theme_minimal()
 ```
 
+```{r}
+tbl_regression(fit_my_data, intercept = TRUE)
+```
 
