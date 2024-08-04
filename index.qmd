@@ -1,0 +1,61 @@
+---
+title: "Pregnancy Data"
+author: "Elaine Zhang"
+format: html
+execute: 
+  echo: false
+---
+
+```{r}
+#| label: setup
+#| message: false
+
+library(tidyverse)
+library(tidybayes)
+library(brms)
+library(gtsummary)
+library(broom.mixed)
+```
+
+```{r}
+my_data <- read.csv("pregnancy-data.csv", sep = ",")
+my_table <- tibble(my_data) |>
+  select(PROMIS_Anxiety, Edinburgh_Postnatal_Depression_Scale, Threaten_Baby_Danger, Birth_Weight) |>
+  drop_na() |>
+  rename(EPDS = Edinburgh_Postnatal_Depression_Scale)
+```
+
+```{r}
+#| cache: true
+
+fit_my_data <- brm(
+  formula = Birth_Weight ~ PROMIS_Anxiety + EPDS + Threaten_Baby_Danger,
+  data = my_table,
+  family = gaussian,
+  silent = 2,
+  refresh = 0,
+  seed = 12
+)
+
+fit_my_data
+tbl_regression(fit_my_data, intercept = TRUE)
+```
+
+```{r}
+# new_data <- tibble(EPDS = seq(min(my_table$EPDS), max(my_table$EPDS), length.out = 100),
+#                    PROMIS_Anxiety = mean(my_table$PROMIS_Anxiety),
+#                    Threaten_Baby_Danger = mean(my_table$Threaten_Baby_Danger))
+# # Add predicted draws
+# predicted_draws <- fit_my_data %>%
+#   add_epred_draws(newdata = new_data)
+# 
+# # Plot the effect of EPDS on Birth Weight
+# predicted_draws %>%
+#   ggplot(aes(x = EPDS, y = .epred)) +
+#   stat_lineribbon() +
+#   labs(title = "Effect of EPDS on Baby Weight",
+#        x = "EPDS Score",
+#        y = "Predicted Baby Weight") +
+#   theme_minimal()
+```
+
