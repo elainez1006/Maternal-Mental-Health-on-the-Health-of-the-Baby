@@ -1,1 +1,1 @@
-Sitemap: https://190eb2cd-7333-46ef-80b9-8b03c85bb25c.netlify.app/sitemap.xml
+Sitemap: https://elainez1006.github.io/pregnancy-data/sitemap.xml
