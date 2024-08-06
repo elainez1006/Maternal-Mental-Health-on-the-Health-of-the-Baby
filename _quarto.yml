@@ -7,7 +7,7 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: sources.qumd
+      - href: sources.qmd
         text: Sources
       - href: about.qmd
         text: About

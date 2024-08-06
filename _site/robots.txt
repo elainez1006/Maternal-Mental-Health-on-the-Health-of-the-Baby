@@ -1,1 +1,1 @@
-Sitemap: https://elainez1006.github.io/pregnancy-data/sitemap.xml
+Sitemap: https://elainez1006.quarto.pub/pregnancy-data/sitemap.xml
