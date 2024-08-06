@@ -9,5 +9,6 @@ R | Python | Javascript
 
 ~~~
 Elaine Zhang,
-@elainez1005@gmail.com
+@elainez1005@gmail.com,
+https://github.com/elainez1006
 ~~~

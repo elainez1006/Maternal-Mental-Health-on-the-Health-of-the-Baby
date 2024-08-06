@@ -1,16 +1,16 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Pregnancy Data",
-    "section": "",
-    "text": "Mental well-being has changed drastically during COVID-19, which may have effects on children born during this period due to the epigenetic alterations. It is shown that mothers with a high Edinburgh Postnatal Depression Scale (EPDS) results have children weighing 0-8% less compared to the average weight of 3,463 grams. Using data from a 2024 study, I seek to find a correlation between maternal mental health and health of the baby during COVID-19. I modeled a linear relationship of the EPDS results, ranging from integers 0-30, and baby mass in grams.\n\n\n\n\n\n\n\n\n\n\n\nWarning in tidy.brmsfit(x, ..., effects = \"fixed\"): some parameter names\ncontain underscores: term naming may be unreliable!\n\n\n\n\n\n\n\n\n\n\n\n\n\nCharacteristic\nBeta\n95% CI\n1\n\n\n\n\n(Intercept)\n3,463\n3,414, 3,511\n\n\nPROMIS_Anxiety\n1.7\n-2.3, 5.8\n\n\nEPDS\n-3.6\n-8.0, 0.69\n\n\nThreaten_Baby_Danger\n-0.99\n-1.5, -0.44\n\n\n\n1\nCI = Credible Interval"
-  },
-  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "My name is Elaine Zhang. I’m a student in Dover-Sherborn Regional High. I’m interested in statistics and discovering relationships in our daily life. R | Python | Javascript\nElaine Zhang,\n@elainez1005@gmail.com"
+    "text": "My name is Elaine Zhang. I’m a student in Dover-Sherborn Regional High. I’m interested in statistics and discovering relationships in our daily life. R | Python | Javascript\nElaine Zhang,\n@elainez1005@gmail.com,\nhttps://github.com/elainez1006"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Pregnancy Data",
+    "section": "",
+    "text": "Mental well-being has changed drastically during COVID-19, which may have effects on children born during this period due to the epigenetic alterations. It is shown that mothers with a high Edinburgh Postnatal Depression Scale (EPDS) results have children weighing 0-8% less compared to the average weight of 3,463 grams. Using data from a 2024 study, I seek to find a correlation between maternal mental health and health of the baby during COVID-19. I modeled a linear relationship of the EPDS results, ranging from integers 0-30, and baby mass in grams.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCharacteristic\nBeta\n95% CI\n1\n\n\n\n\n(Intercept)\n3,463\n3,414, 3,511\n\n\nPROMIS_Anxiety\n1.7\n-2.3, 5.8\n\n\nEPDS\n-3.6\n-8.0, 0.69\n\n\nThreaten_Baby_Danger\n-0.99\n-1.5, -0.44\n\n\n\n1\nCI = Credible Interval"
   }
 ]

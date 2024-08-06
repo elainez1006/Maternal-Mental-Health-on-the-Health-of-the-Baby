@@ -1,0 +1,4 @@
+- source: project
+  quarto-pub:
+    - id: 190eb2cd-7333-46ef-80b9-8b03c85bb25c
+      url: 'https://elainez1006.quarto.pub/pregnancy-data'
