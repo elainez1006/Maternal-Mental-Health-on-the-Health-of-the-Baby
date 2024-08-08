@@ -7,17 +7,24 @@
     "text": "This data is from Kaggle called “Mental health in the pregnancy during the COVID-19” by Yeganeh Bavafa in Febuary, 2024."
   },
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Maternal Mental Health on the Health of the Baby",
+    "section": "",
+    "text": "Mental well-being has changed drastically during COVID-19, which may have effects on children born during this period due to the epigenetic alterations. It is shown that mothers with a high Edinburgh Postnatal Depression Scale (EPDS) may increase the risk on the baby. Using data from a 2024 study, I seek to find a correlation between maternal mental health and health of the baby during COVID-19. After modeling baby weight based on EPDS, I found that mothers with higher EPDS results tend to be 0-8% less compared to the average weight of 3,463 grams"
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "My name is Elaine Zhang. I’m a student in Dover-Sherborn Regional High. I’m interested in statistics and discovering relationships in our daily life. R | Python | Javascript\nElaine Zhang,\n@elainez1005@gmail.com,\nhttps://github.com/elainez1006"
+    "text": "My name is Elaine Zhang. I’m a student in Dover-Sherborn Regional High. I’m interested in statistics and discovering relationships in our daily life. R | Python | Javascript\nElaine Zhang,\n@elainez1005@gmail.com,\nhttps://github.com/elainez1006,\n[Kane's Free Data Science Bootcamp](https://bootcamp.davidkane.info/)"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Pregnancy Data",
+    "objectID": "models.html",
+    "href": "models.html",
+    "title": "Models",
     "section": "",
-    "text": "Mental well-being has changed drastically during COVID-19, which may have effects on children born during this period due to the epigenetic alterations. It is shown that mothers with a high Edinburgh Postnatal Depression Scale (EPDS) results have children weighing 0-8% less compared to the average weight of 3,463 grams. Using data from a 2024 study, I seek to find a correlation between maternal mental health and health of the baby during COVID-19. I modeled a linear relationship of the EPDS results, ranging from integers 0-30, and baby mass in grams.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCharacteristic\nBeta\n95% CI\n1\n\n\n\n\n(Intercept)\n3,463\n3,414, 3,511\n\n\nPROMIS_Anxiety\n1.7\n-2.3, 5.8\n\n\nEPDS\n-3.6\n-8.0, 0.69\n\n\nThreaten_Baby_Danger\n-0.99\n-1.5, -0.44\n\n\n\n1\nCI = Credible Interval"
+    "text": "\\[y_{i} = \\beta_{0} + \\beta_{1} Maternal\\_Education + \\beta_{2}EPDS + \\beta_{3}PROMIS_Anxiety + \\\\ \\beta_{4}Threaten_Baby_Danger + \\epsilon_{i}\\]\n\n\n\n\n\n\n\n\n\n\n\n\n\nCharacteristic\nBeta\n95% CI\n1\n\n\n\n\n(Intercept)\n3,463\n3,414, 3,511\n\n\nPROMIS_Anxiety\n1.7\n-2.3, 5.8\n\n\nEPDS\n-3.6\n-8.0, 0.69\n\n\nThreaten_Baby_Danger\n-0.99\n-1.5, -0.44\n\n\n\n1\nCI = Credible Interval"
   }
 ]
