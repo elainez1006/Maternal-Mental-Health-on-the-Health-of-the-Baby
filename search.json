@@ -11,7 +11,7 @@
     "href": "index.html",
     "title": "Maternal Mental Health on the Health of the Baby",
     "section": "",
-    "text": "Mental well-being has changed drastically during COVID-19, which may have effects on children born during this period due to the epigenetic alterations. It is shown that mothers with a high Edinburgh Postnatal Depression Scale (EPDS) may increase the risk on the baby. Using data from a 2024 study, I seek to find a correlation between maternal mental health and health of the baby during COVID-19. After modeling baby weight based on EPDS, I found that mothers with higher EPDS results tend to be 0-8% less compared to the average weight of 3,463 grams"
+    "text": "Mental well-being has changed drastically during COVID-19, which may have effects on children born during this period due to the epigenetic alterations. As mental well-being may be linked to degrees of education, I sought to find any correlations between maternal education, mental well-being, and baby weight. Using a public data from 2024, I found that mothers with higher EPDS results tend to be 0-8% less compared to the average weight of 3,463 grams. Additionally, maternal education did not have any significant impact on the baby’s weight."
   },
   {
     "objectID": "about.html",
@@ -25,6 +25,6 @@
     "href": "models.html",
     "title": "Models",
     "section": "",
-    "text": "\\[y_{i} = \\beta_{0} + \\beta_{1} Maternal\\_Education + \\beta_{2}EPDS + \\beta_{3}PROMIS_Anxiety + \\\\ \\beta_{4}Threaten_Baby_Danger + \\epsilon_{i}\\]\n\n\n\n\n\n\n\n\n\n\n\n\n\nCharacteristic\nBeta\n95% CI\n1\n\n\n\n\n(Intercept)\n3,463\n3,414, 3,511\n\n\nPROMIS_Anxiety\n1.7\n-2.3, 5.8\n\n\nEPDS\n-3.6\n-8.0, 0.69\n\n\nThreaten_Baby_Danger\n-0.99\n-1.5, -0.44\n\n\n\n1\nCI = Credible Interval"
+    "text": "\\[y_{i} = \\beta_{0} + \\beta_{1} Maternal\\_Education + \\beta_{2}EPDS + \\beta_{3}PROMIS\\_Anxiety + \\\\ \\beta_{4}Threaten\\_Baby\\_Danger + \\epsilon_{i}\\]\n\n\n\n\n\n\n\n\n\n\n\n\n\nCharacteristic\nBeta\n95% CI\n1\n\n\n\n\n(Intercept)\n3,448\n3,239, 3,655\n\n\nPROMIS_Anxiety\n1.9\n-2.2, 5.8\n\n\nEPDS\n-4.0\n-8.2, 0.34\n\n\nThreaten_Baby_Danger\n-1.0\n-1.6, -0.43\n\n\nMaternal_Education\n\n\n\n\n\n\n    Maternal_EducationCollegeDtradeschool\n16\n-189, 224\n\n\n    Maternal_EducationDoctoralDegree\n-16\n-226, 195\n\n\n    Maternal_EducationHighschooldiploma\n43\n-172, 257\n\n\n    Maternal_EducationLessthanhighschooldiploma\n53\n-241, 344\n\n\n    Maternal_EducationMastersdegree\n11\n-195, 220\n\n\n    Maternal_EducationUndergraduatedegree\n23\n-182, 229\n\n\n\n1\nCI = Credible Interval"
   }
 ]
